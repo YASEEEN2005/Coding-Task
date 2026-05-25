@@ -5,6 +5,7 @@ import ReadyToDrive from './components/ReadyToDrive'
 import WhyValam from './components/WhyValam'
 import ReviewsAndBrands from './components/ReviewsAndBrands'
 import FaqAndTrip from './components/FaqAndTrip'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WhyValam />
       <ReviewsAndBrands />
       <FaqAndTrip />
+      <Footer />
     </>
   )
 }
