@@ -1,7 +1,7 @@
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#020514] text-white selection:bg-cyan-500 selection:text-slate-900 antialiased flex flex-col justify-center">
+    <div className="min-h-screen relative overflow-visible bg-[#020514] text-white selection:bg-cyan-500 selection:text-slate-900 antialiased flex flex-col justify-center">
       
       <div className="absolute inset-0 bg-gradient-to-br from-[#0c2b6b] via-[#051433] to-[#02071d] z-0"></div>
 
@@ -115,6 +115,8 @@ export default function HeroSection() {
         <span className="w-2.5 h-2.5 rounded-full bg-white/20"></span>
         <span className="w-2.5 h-2.5 rounded-full bg-white/20"></span>
       </div>
+
+
 
     </div>
   )
