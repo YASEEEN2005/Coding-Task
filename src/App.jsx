@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection'
 import SearchAndOffers from './components/SearchAndOffers'
 import ReadyToDrive from './components/ReadyToDrive'
 import WhyValam from './components/WhyValam'
+import ReviewsAndBrands from './components/ReviewsAndBrands'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <SearchAndOffers />
       <ReadyToDrive />
       <WhyValam />
+      <ReviewsAndBrands />
     </>
   )
 }
