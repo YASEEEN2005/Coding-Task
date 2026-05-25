@@ -1,13 +1,48 @@
-import { Youtube, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
-
 const navLinks = ['Home', 'FAQs', 'Safety', 'Blog', 'Contact Us'];
 
 const socials = [
-  { icon: <Youtube className="w-4 h-4" />, href: '#' },
-  { icon: <Facebook className="w-4 h-4" />, href: '#' },
-  { icon: <Instagram className="w-4 h-4" />, href: '#' },
-  { icon: <Linkedin className="w-4 h-4" />, href: '#' },
-  { icon: <Twitter className="w-4 h-4" />, href: '#' }
+  {
+    href: '#',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.3 3 12 3 12 3s-4.3 0-7.1.1c-.6.1-1.7.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2 .3 4.1.3 4.1s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.3 12 21.3 12 21.3s4.3 0 7.1-.2c.6-.1 1.7-.1 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.1v-2C23.3 9.1 23 7 23 7zm-13.5 8.5v-7l6.4 3.5-6.4 3.5z"/>
+      </svg>
+    )
+  },
+  {
+    href: '#',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    )
+  },
+  {
+    href: '#',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+      </svg>
+    )
+  },
+  {
+    href: '#',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+      </svg>
+    )
+  },
+  {
+    href: '#',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+      </svg>
+    )
+  }
 ];
 
 export default function Footer() {
