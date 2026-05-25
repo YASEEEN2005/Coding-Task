@@ -19,7 +19,7 @@ const cars = [
     id: 1,
     name: "Maruti Swift",
     bgText: "SWIFT",
-    image: "/images/car.png", // using the existing hero car image as placeholder
+    image: "/images/car.png",
     rating: 4.5,
     availability: "Available from 4 Aug 2024",
     price: 3144,
@@ -73,7 +73,6 @@ export default function ReadyToDrive() {
     <section className="w-full bg-white py-16 font-sans">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-[22px] font-bold text-[#334155]">Ready to drive cars</h2>
           <button className="flex items-center gap-1 text-[#1d4ed8] font-semibold text-[15px] hover:text-[#1e3a8a] transition-colors">
@@ -82,9 +81,7 @@ export default function ReadyToDrive() {
           </button>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
-          {/* Left Button */}
           <button className="hidden lg:flex absolute -left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-[#e2e8f0] shadow-sm items-center justify-center text-[#64748b] hover:bg-[#f8fafc] transition-all z-10">
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -95,9 +92,7 @@ export default function ReadyToDrive() {
                 key={car.id} 
                 className="min-w-[340px] md:min-w-[380px] flex-1 bg-[#e4ebf3] rounded-[24px] overflow-hidden snap-center relative shadow-sm border border-[#dbe4f0] flex flex-col"
               >
-                {/* Top Half (Image and Badges) */}
                 <div className="relative h-[220px] w-full bg-[#eef4fa] flex items-center pt-8">
-                  {/* Top Badges */}
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
                     <div className="flex gap-2">
                       <div className="bg-white px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
@@ -113,14 +108,12 @@ export default function ReadyToDrive() {
                     </button>
                   </div>
 
-                  {/* Giant Background Text */}
-                  <div className="absolute left-1 top-0 bottom-0 flex items-center justify-center w-16 z-0">
-                    <span className="-rotate-90 text-[56px] font-black text-[#93c5fd] opacity-75 tracking-widest whitespace-nowrap select-none">
+                  <div className="absolute left-1 top-5 bottom-0 flex items-center justify-center w-16 z-0">
+                    <span className="-rotate-90 text-[30px] font-black text-[#93c5fd] opacity-75 tracking-widest whitespace-nowrap select-none">
                       {car.bgText}
                     </span>
                   </div>
 
-                  {/* Car Image */}
                   <div className="w-full pl-16 pr-4 flex justify-center mt-2 relative z-10">
                     <img 
                       src={car.image} 
@@ -130,7 +123,6 @@ export default function ReadyToDrive() {
                   </div>
                 </div>
 
-                {/* Bottom Half (Content) */}
                 <div className="px-5 py-5 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex justify-between items-end mb-1">
@@ -182,13 +174,11 @@ export default function ReadyToDrive() {
             ))}
           </div>
 
-          {/* Right Button */}
           <button className="hidden lg:flex absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-[#e2e8f0] shadow-sm items-center justify-center text-[#64748b] hover:bg-[#f8fafc] transition-all z-10">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Pagination Dots */}
         <div className="flex justify-center mt-6 mb-12">
           <div className="flex items-center gap-1.5 px-2 py-1 rounded-full border border-[#bfdbfe]">
             <div className="w-2.5 h-2.5 rounded-full bg-[#3b82f6]"></div>
@@ -197,14 +187,12 @@ export default function ReadyToDrive() {
           </div>
         </div>
 
-        {/* Stats Banner */}
         <div className="mt-4">
           <h3 className="text-[16px] font-bold text-[#334155] mb-4">Coimbatore Car Rental: Real Time Information</h3>
           
           <div className="bg-[#f8fafc] rounded-[24px] border border-[#f1f5f9] p-6 w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <div className="flex flex-col lg:flex-row items-center justify-between min-w-[800px] lg:min-w-0 gap-6 lg:gap-0">
               
-              {/* Stat 1 */}
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-start px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
                   <BadgeCent className="w-6 h-6 text-[#1e3a8a]" />
@@ -217,7 +205,6 @@ export default function ReadyToDrive() {
 
               <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
 
-              {/* Stat 2 */}
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-center px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
                   <CarFront className="w-6 h-6 text-[#1e3a8a]" />
@@ -230,7 +217,6 @@ export default function ReadyToDrive() {
 
               <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
 
-              {/* Stat 3 */}
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-center px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
                   <HandCoins className="w-6 h-6 text-[#1e3a8a]" />
@@ -243,7 +229,6 @@ export default function ReadyToDrive() {
 
               <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
 
-              {/* Stat 4 */}
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-end px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
                   <CircleDollarSign className="w-6 h-6 text-[#1e3a8a]" />
