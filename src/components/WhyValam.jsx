@@ -109,10 +109,10 @@ export default function WhyValam() {
               />
             </div>
             
-            <svg className="hidden lg:block absolute top-0 right-[25%] h-full w-[200px] z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
-               <path d="M 0 0 C 40 0, 40 25, 80 25 L 100 25 L 100 100 L 0 100 Z" fill="transparent" stroke="#a5c8fb" strokeWidth="0.5" />
-            </svg>
-            <div className="hidden lg:block absolute top-0 right-0 bottom-0 left-[75%] bg-[#f8fafc] z-0"></div>
+            <div 
+              className="hidden lg:block absolute top-[-1.5px] right-[-1.5px] w-[320px] h-[320px] bg-white border-b-[1.5px] border-l-[1.5px] border-[#a5c8fb] z-0 pointer-events-none"
+              style={{ borderBottomLeftRadius: '100%' }}
+            ></div>
 
           </div>
         </div>
