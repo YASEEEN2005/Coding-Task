@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Star, StarHalf, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const brands = [
@@ -41,6 +42,15 @@ const reviews = [
 ];
 
 export default function ReviewsAndBrands() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -340 : 340;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="w-full bg-white py-16 font-sans">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,11 +95,17 @@ export default function ReviewsAndBrands() {
 
             <div className="relative flex-1 flex flex-col min-w-0 w-full">
               <div className="relative flex items-center w-full">
-                <button className="hidden lg:flex absolute left-[-18px] z-10 w-[38px] h-[38px] bg-white border border-[#e2e8f0] rounded-full items-center justify-center shadow-sm text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a] transition-all">
+                <button 
+                  onClick={() => scroll('left')}
+                  className="hidden lg:flex absolute left-[-18px] z-10 w-[38px] h-[38px] bg-white border border-[#e2e8f0] rounded-full items-center justify-center shadow-sm text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a] transition-all"
+                >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 
-                <div className="flex gap-4 lg:gap-6 overflow-x-auto snap-x w-full px-2 lg:px-8 py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <div 
+                  ref={scrollRef}
+                  className="flex gap-4 lg:gap-6 overflow-x-auto snap-x w-full py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                >
                   {reviews.map(review => (
                     <div key={review.name} className="bg-[#f8fafc] rounded-[28px] p-6 w-[280px] sm:w-[320px] shrink-0 snap-center shadow-sm border border-[#f1f5f9]">
                       <div className="flex items-center gap-3 mb-4">
@@ -110,7 +126,10 @@ export default function ReviewsAndBrands() {
                   ))}
                 </div>
 
-                <button className="hidden lg:flex absolute right-[-18px] z-10 w-[38px] h-[38px] bg-white border border-[#e2e8f0] rounded-full items-center justify-center shadow-sm text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a] transition-all">
+                <button 
+                  onClick={() => scroll('right')}
+                  className="hidden lg:flex absolute right-[-18px] z-10 w-[38px] h-[38px] bg-white border border-[#e2e8f0] rounded-full items-center justify-center shadow-sm text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a] transition-all"
+                >
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
