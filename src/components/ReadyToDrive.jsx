@@ -86,7 +86,7 @@ export default function ReadyToDrive() {
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          <div className="flex gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory hide-scrollbar pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {cars.map((car) => (
               <div 
                 key={car.id} 
@@ -191,7 +191,7 @@ export default function ReadyToDrive() {
           <h3 className="text-[16px] font-bold text-[#334155] mb-4">Coimbatore Car Rental: Real Time Information</h3>
           
           <div className="bg-[#f8fafc] rounded-[24px] border border-[#f1f5f9] p-6 w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <div className="flex flex-col lg:flex-row items-center justify-between min-w-[800px] lg:min-w-0 gap-6 lg:gap-0">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
               
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-start px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
@@ -203,7 +203,7 @@ export default function ReadyToDrive() {
                 </div>
               </div>
 
-              <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
+              <div className="w-full h-px lg:w-px lg:h-12 bg-[#cbd5e1]"></div>
 
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-center px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
@@ -215,7 +215,7 @@ export default function ReadyToDrive() {
                 </div>
               </div>
 
-              <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
+              <div className="w-full h-px lg:w-px lg:h-12 bg-[#cbd5e1]"></div>
 
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-center px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">
@@ -227,7 +227,7 @@ export default function ReadyToDrive() {
                 </div>
               </div>
 
-              <div className="hidden lg:block w-px h-12 bg-[#cbd5e1]"></div>
+              <div className="w-full h-px lg:w-px lg:h-12 bg-[#cbd5e1]"></div>
 
               <div className="flex items-center gap-4 flex-1 justify-center lg:justify-end px-4">
                 <div className="w-[52px] h-[52px] rounded-full bg-white shadow-sm flex items-center justify-center border border-[#f1f5f9] flex-shrink-0">

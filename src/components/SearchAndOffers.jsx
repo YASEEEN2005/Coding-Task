@@ -146,7 +146,7 @@ export default function SearchAndOffers()
             <ChevronLeft className="w-5 h-5" strokeWidth={2.5} />
           </button>
 
-          <div className="flex items-center gap-4 lg:gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory px-4 lg:px-0 py-4 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="flex items-center gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 py-4 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {offers.map((item) => (
               <div key={item} className="relative drop-shadow-[0_8px_16px_rgba(15,23,42,0.08)] snap-center shrink-0">
                 <div
