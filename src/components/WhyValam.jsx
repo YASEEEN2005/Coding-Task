@@ -1,5 +1,5 @@
 import {
-  SteeringWheel,
+  Compass,
   CarFront,
   Home,
   BadgeCent,
@@ -11,7 +11,7 @@ const features = [
     id: 1,
     title: "Book with flexibility",
     desc: "Filter for car offers with free cancellation, unlimited mileage, and more.",
-    icon: <SteeringWheel className="w-6 h-6 text-[#1e40af] relative z-10" />
+    icon: <Compass className="w-6 h-6 text-[#1e40af] relative z-10" />
   },
   {
     id: 2,
