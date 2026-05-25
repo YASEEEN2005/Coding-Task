@@ -10,8 +10,8 @@ function App() {
       <Navbar />
       <HeroSection />
       <SearchAndOffers />
-      <WhyValam />
       <ReadyToDrive />
+      <WhyValam />
     </>
   )
 }

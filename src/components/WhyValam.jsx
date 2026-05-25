@@ -103,7 +103,7 @@ export default function WhyValam() {
 
             <div className="lg:hidden mt-10 w-full flex justify-center relative z-10 pointer-events-none">
               <img 
-                src="/images/car.png" 
+                src="/Car images/mahindra.png" 
                 alt="Silver SUV" 
                 className="w-full max-w-[320px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)]" 
               />
