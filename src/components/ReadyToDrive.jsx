@@ -93,78 +93,85 @@ export default function ReadyToDrive() {
             {cars.map((car) => (
               <div 
                 key={car.id} 
-                className="min-w-[340px] md:min-w-[380px] flex-1 bg-[#eef2ff] rounded-[24px] overflow-hidden snap-center relative shadow-sm border border-[#e0e7ff]"
+                className="min-w-[340px] md:min-w-[380px] flex-1 bg-[#e4ebf3] rounded-[24px] overflow-hidden snap-center relative shadow-sm border border-[#dbe4f0] flex flex-col"
               >
-                {/* Top Badges */}
-                <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
-                  <div className="flex gap-2">
-                    <div className="bg-white px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                      <Star className="w-3.5 h-3.5 fill-[#ea580c] text-[#ea580c]" />
-                      <span className="text-[12px] font-bold text-[#334155]">{car.rating}</span>
+                {/* Top Half (Image and Badges) */}
+                <div className="relative h-[220px] w-full bg-[#eef4fa] flex items-center pt-8">
+                  {/* Top Badges */}
+                  <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
+                    <div className="flex gap-2">
+                      <div className="bg-white px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                        <Star className="w-3.5 h-3.5 fill-[#ea580c] text-[#ea580c]" />
+                        <span className="text-[12px] font-bold text-[#334155]">{car.rating}</span>
+                      </div>
+                      <div className="bg-white px-3 py-1 rounded-full flex items-center shadow-sm">
+                        <span className="text-[12px] font-bold text-[#475569]">{car.availability}</span>
+                      </div>
                     </div>
-                    <div className="bg-white px-3 py-1 rounded-full flex items-center shadow-sm">
-                      <span className="text-[12px] font-bold text-[#475569]">{car.availability}</span>
-                    </div>
+                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-[#64748b] hover:text-[#0f172a] transition-colors">
+                      <Bookmark className="w-4 h-4" />
+                    </button>
                   </div>
-                  <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-[#64748b] hover:text-[#0f172a] transition-colors">
-                    <Bookmark className="w-4 h-4" />
-                  </button>
-                </div>
 
-                {/* Car Image Area */}
-                <div className="relative h-[200px] w-full flex items-center justify-center mt-6">
                   {/* Giant Background Text */}
-                  <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[54px] font-black text-[#bfdbfe] opacity-70 tracking-widest pointer-events-none select-none z-0 font-serif">
-                    {car.bgText}
+                  <div className="absolute left-1 top-0 bottom-0 flex items-center justify-center w-16 z-0">
+                    <span className="-rotate-90 text-[56px] font-black text-[#93c5fd] opacity-75 tracking-widest whitespace-nowrap select-none">
+                      {car.bgText}
+                    </span>
                   </div>
+
                   {/* Car Image */}
-                  <img 
-                    src={car.image} 
-                    alt={car.name} 
-                    className="relative z-10 w-[80%] h-auto object-contain drop-shadow-xl"
-                  />
+                  <div className="w-full pl-16 pr-4 flex justify-center mt-2 relative z-10">
+                    <img 
+                      src={car.image} 
+                      alt={car.name} 
+                      className="w-full max-w-[260px] h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]"
+                    />
+                  </div>
                 </div>
 
-                {/* Content Area */}
-                <div className="px-5 pb-5 pt-2">
-                  <div className="flex justify-between items-end mb-1">
-                    <h3 className="text-[18px] font-bold text-[#1e293b]">{car.name}</h3>
-                    <div className="text-right">
-                      <span className="text-[20px] font-extrabold text-[#0f172a]">₹{car.price}</span>
-                      <span className="text-[11px] font-semibold text-[#64748b] ml-1">per day</span>
+                {/* Bottom Half (Content) */}
+                <div className="px-5 py-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-end mb-1">
+                      <h3 className="text-[19px] font-bold text-[#0f172a]">{car.name}</h3>
+                      <div className="text-right">
+                        <span className="text-[20px] font-extrabold text-[#0f172a]">₹{car.price}</span>
+                        <span className="text-[11px] font-semibold text-[#64748b] ml-1">per day</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 mb-5">
+                      <MapPin className="w-3.5 h-3.5 text-[#334155] fill-[#334155]" />
+                      <span className="text-[12.5px] font-semibold text-[#475569]">{car.location}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1.5 mb-4">
-                    <MapPin className="w-3.5 h-3.5 text-[#1e3a8a] fill-[#1e3a8a]" />
-                    <span className="text-[12px] font-semibold text-[#475569]">{car.location}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-3">
                       <div className="flex items-center gap-1">
-                        <Settings2 className="w-3.5 h-3.5 text-[#64748b]" />
-                        <span className="text-[11px] font-medium text-[#64748b]">{car.specs.transmission}</span>
+                        <Settings2 className="w-3.5 h-3.5 text-[#475569]" />
+                        <span className="text-[11px] font-semibold text-[#475569]">{car.specs.transmission}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Users className="w-3.5 h-3.5 text-[#64748b]" />
-                        <span className="text-[11px] font-medium text-[#64748b]">{car.specs.seats} Seats</span>
+                        <Users className="w-3.5 h-3.5 text-[#475569]" />
+                        <span className="text-[11px] font-semibold text-[#475569]">{car.specs.seats} Seats</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Snowflake className="w-3.5 h-3.5 text-[#64748b]" />
-                        <span className="text-[11px] font-medium text-[#64748b]">AC</span>
+                        <Snowflake className="w-3.5 h-3.5 text-[#475569]" />
+                        <span className="text-[11px] font-semibold text-[#475569]">AC</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Fuel className="w-3.5 h-3.5 text-[#64748b]" />
-                        <span className="text-[11px] font-medium text-[#64748b]">{car.specs.fuel}</span>
+                        <Fuel className="w-3.5 h-3.5 text-[#475569]" />
+                        <span className="text-[11px] font-semibold text-[#475569]">{car.specs.fuel}</span>
                       </div>
                     </div>
                     
                     <button 
-                      className={`px-5 py-2.5 rounded-full text-[13px] font-bold shadow-md transition-colors ${
+                      className={`px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold shadow-sm transition-colors ${
                         car.status === 'available' 
                           ? 'bg-[#173f8a] hover:bg-[#1e3a8a] text-white' 
-                          : 'bg-[#334155] hover:bg-[#1e293b] text-white'
+                          : 'bg-[#27272a] hover:bg-[#18181b] text-white'
                       }`}
                     >
                       {car.status === 'available' ? 'Book Now' : 'Sold Out'}
