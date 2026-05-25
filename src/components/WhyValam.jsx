@@ -95,9 +95,9 @@ export default function WhyValam() {
 
             <div className="hidden lg:block absolute right-[-100px] top-1/2 -translate-y-1/2 w-[600px] z-10 pointer-events-none">
               <img 
-                src="/images/car.png" 
+                src="/Car images/mahindra.png" 
                 alt="Silver SUV" 
-                className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-[1.15]" 
+                className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-[.8]" 
               />
             </div>
 
@@ -110,17 +110,17 @@ export default function WhyValam() {
             </div>
             
             <svg 
-              className="hidden lg:block absolute top-[-1.5px] right-[-1.5px] w-[340px] h-[340px] z-0 pointer-events-none" 
-              viewBox="0 0 340 340" 
+              className="hidden lg:block absolute top-0 right-0 w-[550px] h-[380px] z-0 pointer-events-none" 
+              viewBox="0 0 550 380" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
             >
               <path 
-                d="M 0 0.75 C 170 0.75, 339.25 170, 339.25 340 L 340 340 L 340 0 L 0 0 Z" 
+                d="M 0 0 C 275 0, 550 160, 550 320 L 550 0 Z" 
                 fill="white" 
               />
               <path 
-                d="M 0 0.75 C 170 0.75, 339.25 170, 339.25 340" 
+                d="M 0 0 C 275 0, 550 160, 550 320" 
                 stroke="#a5c8fb" 
                 strokeWidth="1.5" 
               />
