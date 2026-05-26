@@ -5,17 +5,10 @@ export default function Navbar() {
 
   return (
     <div className="absolute top-6 left-0 w-full z-50 px-4">
-      <div className={`max-w-6xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300 ${isOpen ? 'rounded-[2rem] py-6 px-6 bg-[#091a3e]/95 border-white/15' : 'rounded-full py-2.5 px-4 sm:px-6'}`}>
+      <div className={`max-w-6xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 shadow-lg ${isOpen ? 'rounded-[2rem] py-6 px-6 bg-[#091a3e]/95' : 'rounded-full py-2.5 px-4 sm:px-6'}`}>
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <div className="inline-flex flex-col items-center justify-center border-2 border-dashed border-white/20 rounded-full px-5 py-1">
-              <span className="text-xl font-serif font-black italic tracking-tight text-white leading-none">
-                Valam
-              </span>
-              <span className="text-[6px] uppercase font-bold tracking-[0.2em] text-white/40 mt-0.5">
-                Self Driving Cars
-              </span>
-            </div>
+            <img src="/images/footer logo.png" alt="Valam Logo" className="h-[38px] w-auto object-contain" />
           </div>
 
           <div className="hidden md:flex space-x-10 items-center">
@@ -77,8 +70,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-          <div className="flex flex-col space-y-4 px-2">
+        {isOpen && (
+          <div className="md:hidden mt-6 flex flex-col space-y-4 px-2">
             <a
               href="#"
               className="py-2 text-base font-semibold text-white border-b border-white/5"
@@ -121,7 +114,7 @@ export default function Navbar() {
               </a>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )
