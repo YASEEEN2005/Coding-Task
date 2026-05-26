@@ -5,11 +5,8 @@ export default function Navbar() {
 
   return (
     <div className="absolute top-6 left-0 w-full z-50 px-4">
-      <div className={`relative overflow-hidden max-w-6xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 shadow-lg ${isOpen ? 'rounded-[2rem] py-6 px-6 bg-[#091a3e]/95' : 'rounded-full py-2.5 px-4 sm:px-6'}`}>
-        
-        <div className="absolute top-0 left-0 h-full w-[160px] sm:w-[220px] bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
-
-        <div className="flex justify-between items-center relative z-10">
+      <div className={`max-w-6xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 shadow-lg ${isOpen ? 'rounded-[2rem] py-6 px-6 bg-[#091a3e]/95' : 'rounded-full py-2.5 px-4 sm:px-6'}`}>
+        <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <img src="/images/footer logo.png" alt="Valam Logo" className="h-[38px] w-auto object-contain" />
           </div>
@@ -74,7 +71,7 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden mt-6 flex flex-col space-y-4 px-2 relative z-10">
+          <div className="md:hidden mt-6 flex flex-col space-y-4 px-2">
             <a
               href="#"
               className="py-2 text-base font-semibold text-white border-b border-white/5"
