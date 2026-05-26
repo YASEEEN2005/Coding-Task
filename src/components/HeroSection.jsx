@@ -3,20 +3,9 @@ export default function HeroSection() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-[#020514] text-white selection:bg-cyan-500 selection:text-slate-900 antialiased flex flex-col justify-center">
       
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0c2b6b] via-[#051433] to-[#02071d] z-0"></div>
-
-      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-blue-600/25 blur-[130px] z-0 pointer-events-none"></div>
-      <div className="absolute bottom-[5%] right-[5%] w-[70%] h-[70%] rounded-full bg-blue-500/10 blur-[150px] z-0 pointer-events-none"></div>
-
       <div 
-        className="absolute inset-0 z-0 opacity-15 pointer-events-none transform -rotate-[15deg] scale-150" 
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(96, 165, 250, 0.12) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(96, 165, 250, 0.12) 1px, transparent 1px)
-          `,
-          backgroundSize: '55px 55px'
-        }}
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/images/hero backround.png")' }}
       ></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 w-full pt-32 pb-24 lg:pt-40 lg:pb-32">
@@ -89,13 +78,14 @@ export default function HeroSection() {
 
           <div className="lg:col-span-6 relative flex justify-end items-center mt-12 lg:mt-0">
             <div className="absolute left-[48%] top-[-8%] z-20 flex flex-col items-center">
+                <svg className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] -mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
               <span className="relative flex h-3.5 w-3.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-cyan-500 shadow-[0_0_8px_#22d3ee]"></span>
               </span>
-              <svg className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] -mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
+            
             </div>
 
             <div className="w-full relative z-10 flex justify-end scale-105 sm:scale-110 lg:scale-[1.25] transition-transform duration-300">
