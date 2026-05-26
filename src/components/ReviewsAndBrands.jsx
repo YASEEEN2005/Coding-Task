@@ -16,12 +16,12 @@ const brands = [
 const reviews = [
   {
     name: 'Suresh Kumar',
-    avatar: 'https://ui-avatars.com/api/?name=Suresh+Kumar&background=cbd5e1&color=334155&bold=true',
+    avatar: '/customers/165f73a07e3835c646823063b6ca72a7beeca0f9.png',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...'
   },
   {
     name: 'Raj',
-    avatar: 'https://ui-avatars.com/api/?name=Raj&background=cbd5e1&color=334155&bold=true',
+    avatar: '/customers/911423d024c5b036dcde19fdbf369a5bf748b41f.png',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...'
   },
   {
