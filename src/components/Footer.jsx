@@ -59,20 +59,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 py-10 lg:py-8">
 
           <div className="flex flex-col items-center lg:items-start">
-            <div className="relative w-[90px] h-[90px] flex items-center justify-center mb-1">
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: 'transparent',
-                  border: '2px dashed rgba(255,255,255,0.35)',
-                  borderRadius: '50%'
-                }}
-              ></div>
-              <span className="text-white font-black text-[28px] italic tracking-tight leading-none select-none" style={{ fontFamily: 'Georgia, serif' }}>
-                Valam
-              </span>
-            </div>
-            <p className="text-white/50 text-[11px] font-medium tracking-wide mt-1">Self Driving Cars</p>
+            <img src="/images/footer logo.png" alt="Valam Logo" className="h-[70px] lg:h-[90px] w-auto object-contain" />
           </div>
 
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 lg:gap-x-10">
@@ -87,12 +74,12 @@ export default function Footer() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2.5">
+          <div className="bg-white rounded-full px-5 py-2.5 flex items-center gap-3 shadow-md">
             {socials.map((s, i) => (
               <a
                 key={i}
                 href={s.href}
-                className="w-[36px] h-[36px] rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white/10 hover:text-white hover:border-white/60 transition-all"
+                className="w-[32px] h-[32px] rounded-full bg-[#2563eb] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm"
               >
                 {s.icon}
               </a>
