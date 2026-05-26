@@ -90,7 +90,7 @@ export default function ReadyToDrive() {
             {cars.map((car) => (
               <div 
                 key={car.id} 
-                className="min-w-[340px] md:min-w-[380px] flex-1 bg-[#e4ebf3] rounded-[24px] overflow-hidden snap-center relative shadow-sm border border-[#dbe4f0] flex flex-col"
+                className="min-w-[340px] md:min-w-[380px] flex-1 bg-[#e4ebf3] rounded-[24px] overflow-hidden snap-center relative shadow-sm border border-[#dbe4f0] flex flex-col group hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default"
               >
                 <div className="relative h-[220px] w-full bg-[#eef4fa] flex items-center pt-8">
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
@@ -118,7 +118,7 @@ export default function ReadyToDrive() {
                     <img 
                       src={car.image} 
                       alt={car.name} 
-                      className="w-full max-w-[260px] h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]"
+                      className="w-full max-w-[260px] h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)] group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -160,9 +160,9 @@ export default function ReadyToDrive() {
                     </div>
                     
                     <button 
-                      className={`px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold shadow-sm transition-colors ${
+                      className={`px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold shadow-sm transition-all duration-300 hover:scale-105 ${
                         car.status === 'available' 
-                          ? 'bg-[#173f8a] hover:bg-[#1e3a8a] text-white' 
+                          ? 'bg-[#173f8a] hover:bg-[#1e3a8a] text-white hover:shadow-md' 
                           : 'bg-[#27272a] hover:bg-[#18181b] text-white'
                       }`}
                     >

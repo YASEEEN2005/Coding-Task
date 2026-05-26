@@ -107,7 +107,7 @@ export default function ReviewsAndBrands() {
                   className="flex gap-4 lg:gap-6 overflow-x-auto snap-x w-full py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                 >
                   {reviews.map(review => (
-                    <div key={review.name} className="bg-[#f8fafc] rounded-[28px] p-6 w-[280px] sm:w-[320px] shrink-0 snap-center shadow-sm border border-[#f1f5f9]">
+                    <div key={review.name} className="bg-[#f8fafc] rounded-[28px] p-6 w-[280px] sm:w-[320px] shrink-0 snap-center shadow-sm border border-[#f1f5f9] group hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-11 h-11 rounded-full overflow-hidden shrink-0">
                           <img src={review.avatar} alt={review.name} className="w-full h-full object-cover" />
@@ -150,12 +150,12 @@ export default function ReviewsAndBrands() {
           <h3 className="text-[17px] font-bold text-[#334155] mb-5 px-1">Popular brands</h3>
           <div className="flex gap-3 overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden snap-x px-1">
             {brands.map(brand => (
-              <div key={brand.name} className="w-[124px] h-[96px] bg-white border border-[#e2e8f0] rounded-[24px] flex flex-col items-center justify-center shrink-0 snap-start shadow-[0_2px_8px_rgba(0,0,0,0.03)] transition-all hover:border-[#bfdbfe] hover:shadow-md cursor-pointer">
+              <div key={brand.name} className="w-[124px] h-[96px] bg-white border border-[#e2e8f0] rounded-[24px] flex flex-col items-center justify-center shrink-0 snap-start shadow-[0_2px_8px_rgba(0,0,0,0.03)] transition-all duration-300 hover:border-[#bfdbfe] hover:shadow-md hover:-translate-y-1 cursor-pointer group">
                 <div className="h-[46px] w-full flex items-center justify-center mb-1">
                   <img 
                     src={`/Brand images/${brand.img}`} 
                     alt={brand.name} 
-                    className="h-full w-auto max-w-[85%] object-contain" 
+                    className="h-full w-auto max-w-[85%] object-contain group-hover:scale-110 transition-transform duration-300" 
                   />
                 </div>
                 <span className="text-[11px] font-bold text-[#475569]">{brand.name}</span>

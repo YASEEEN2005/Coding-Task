@@ -136,9 +136,9 @@ export default function FaqAndTrip() {
                 className="flex gap-4 lg:gap-6 overflow-x-auto snap-x w-full py-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
               >
                 {trips.map(trip => (
-                  <div key={trip.id} className="bg-white rounded-[24px] w-[260px] shrink-0 snap-center shadow-sm overflow-hidden border border-[#e2e8f0] flex flex-col transition-transform hover:shadow-md hover:-translate-y-1 cursor-pointer">
-                    <div className="relative w-full h-[150px] bg-gray-200">
-                      <img src={`/Trip images/${trip.image}`} alt={trip.title} className="w-full h-full object-cover" />
+                  <div key={trip.id} className="bg-white rounded-[24px] w-[260px] shrink-0 snap-center shadow-sm overflow-hidden border border-[#e2e8f0] flex flex-col transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer group">
+                    <div className="relative w-full h-[150px] bg-gray-200 overflow-hidden">
+                      <img src={`/Trip images/${trip.image}`} alt={trip.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1 shadow-sm">
                         <Star className="w-3.5 h-3.5 fill-[#ea580c] text-[#ea580c]" />
                         <span className="text-[12px] font-bold text-[#334155]">{trip.rating}</span>

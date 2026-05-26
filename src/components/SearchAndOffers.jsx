@@ -109,7 +109,7 @@ export default function SearchAndOffers()
             </div>
             
             <div className="pt-5 lg:pt-0 lg:pl-5 flex items-center w-full lg:w-auto justify-center">
-              <button className="h-[54px] lg:h-[62px] w-full lg:w-auto lg:min-w-[170px] px-8 rounded-full bg-[#173f8a] hover:bg-[#204da8] transition-all duration-300 flex items-center justify-center gap-3 text-white text-[18px] font-semibold shadow-[0_10px_22px_rgba(23,63,138,0.24)]">
+              <button className="h-[54px] lg:h-[62px] w-full lg:w-auto lg:min-w-[170px] px-8 rounded-full bg-[#173f8a] hover:bg-[#1e3a8a] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-white text-[18px] font-semibold shadow-[0_10px_22px_rgba(23,63,138,0.24)] hover:shadow-[0_12px_28px_rgba(23,63,138,0.35)]">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -148,7 +148,7 @@ export default function SearchAndOffers()
 
           <div className="flex items-center gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 py-4 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {offers.map((item) => (
-              <div key={item} className="relative drop-shadow-[0_8px_16px_rgba(15,23,42,0.08)] snap-center shrink-0">
+              <div key={item} className="relative drop-shadow-[0_8px_16px_rgba(15,23,42,0.08)] hover:drop-shadow-[0_12px_24px_rgba(15,23,42,0.15)] snap-center shrink-0 hover:-translate-y-1 transition-all duration-300 cursor-default">
                 <div
                   className="relative w-[340px] h-[126px] bg-white flex"
                   style={{

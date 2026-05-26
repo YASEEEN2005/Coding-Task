@@ -44,8 +44,8 @@ export default function WhyValam() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {features.map((feature) => (
-            <div key={feature.id} className="bg-[#f0f6ff] rounded-2xl p-4 flex gap-4 w-full items-start">
-              <div className="w-[52px] h-[52px] rounded-[14px] bg-[#dbeafe] flex items-center justify-center shrink-0 relative">
+            <div key={feature.id} className="bg-[#f0f6ff] rounded-2xl p-4 flex gap-4 w-full items-start group hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
+              <div className="w-[52px] h-[52px] rounded-[14px] bg-[#dbeafe] group-hover:bg-[#bfdbfe] transition-colors flex items-center justify-center shrink-0 relative">
                 <div className="absolute top-2 left-2 w-4 h-4 bg-blue-400 rounded-full blur-[8px] opacity-70"></div>
                 {feature.icon}
               </div>
@@ -66,12 +66,12 @@ export default function WhyValam() {
             <p className="text-[#475569] text-[14px] lg:text-[15px] font-semibold leading-relaxed mb-10 max-w-[280px]">
               With Valam, every mile turns into a personal adventure on the road.
             </p>
-            <button className="bg-[#173f8a] text-white font-bold text-[14px] px-7 py-3.5 rounded-full hover:bg-[#1e3a8a] transition-all w-fit shadow-md">
+            <button className="bg-[#173f8a] text-white font-bold text-[14px] px-7 py-3.5 rounded-full hover:bg-[#1e3a8a] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 w-fit shadow-md">
               Book Us For Safety Ride
             </button>
           </div>
 
-          <div className="lg:w-[60%] bg-[#f8fafc] rounded-[40px] border-[1.5px] border-[#a5c8fb] p-8 lg:p-12 flex flex-col justify-center relative shadow-sm overflow-hidden min-h-[320px]">
+          <div className="lg:w-[60%] bg-[#f8fafc] rounded-[40px] border-[1.5px] border-[#a5c8fb] p-8 lg:p-12 flex flex-col justify-center relative shadow-sm overflow-hidden min-h-[320px] group cursor-default">
             
             <div className="relative z-20 max-w-full lg:max-w-[50%]">
               <div className="flex items-center gap-2 text-[#475569] mb-4">
@@ -88,7 +88,7 @@ export default function WhyValam() {
                 Get 15% To 20% OFF
               </div>
               
-              <button className="bg-[#173f8a] text-white font-bold text-[14px] px-7 py-3.5 rounded-full hover:bg-[#1e3a8a] transition-all w-fit shadow-md">
+              <button className="bg-[#173f8a] text-white font-bold text-[14px] px-7 py-3.5 rounded-full hover:bg-[#1e3a8a] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 w-fit shadow-md">
                 To Know More Offers
               </button>
             </div>
@@ -97,7 +97,7 @@ export default function WhyValam() {
               <img 
                 src="/Car images/mahindra.png" 
                 alt="Silver SUV" 
-                className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-[.8]" 
+                className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-[.8] group-hover:scale-[.85] transition-transform duration-700" 
               />
             </div>
 
@@ -105,7 +105,7 @@ export default function WhyValam() {
               <img 
                 src="/Car images/mahindra.png" 
                 alt="Silver SUV" 
-                className="w-full max-w-[320px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)]" 
+                className="w-full max-w-[320px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] group-hover:scale-105 transition-transform duration-700" 
               />
             </div>
             
