@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="fixed top-6 left-0 w-full z-50 px-4">
+    <div className="absolute top-6 left-0 w-full z-50 px-4">
       <div className={`max-w-6xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300 ${isOpen ? 'rounded-[2rem] py-6 px-6 bg-[#091a3e]/95 border-white/15' : 'rounded-full py-2.5 px-4 sm:px-6'}`}>
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
