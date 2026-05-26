@@ -9,7 +9,7 @@ export default function HeroSection() {
       ></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 w-full pt-32 pb-24 lg:pt-40 lg:pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-22 items-center">
           
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
@@ -76,18 +76,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 relative flex justify-end items-center mt-12 lg:mt-0">
-            <div className="absolute left-[48%] top-[-8%] z-20 flex flex-col items-center">
-                <svg className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] -mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
-              <span className="relative flex h-3.5 w-3.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-cyan-500 shadow-[0_0_8px_#22d3ee]"></span>
-              </span>
-            
-            </div>
-
+          <div className="lg:col-span-6 relative flex justify-end items-center mt-16 lg:mt-16 lg:translate-y-6">
             <div className="w-full relative z-10 flex justify-end scale-105 sm:scale-110 lg:scale-[1.25] transition-transform duration-300">
               <img 
                 src="/images/car.png" 
