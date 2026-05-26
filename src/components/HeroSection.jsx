@@ -1,5 +1,23 @@
+import { useState, useEffect } from 'react';
+
+const heroImages = [
+  "/images/car.png",
+  "/Car images/Sonet.png",
+  "/Car images/mahindra.png",
+  "/Car images/scorpio.png",
+  "/Car images/swift.png"
+];
 
 export default function HeroSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-[#020514] text-white selection:bg-cyan-500 selection:text-slate-900 antialiased flex flex-col justify-center">
       
@@ -79,10 +97,22 @@ export default function HeroSection() {
           <div className="lg:col-span-6 relative flex justify-end items-center mt-16 lg:mt-16 lg:translate-y-6">
             <div className="w-full relative z-10 flex justify-end scale-105 sm:scale-110 lg:scale-[1.25] transition-transform duration-300">
               <img 
-                src="/images/car.png" 
-                alt="Red Hatchback Car" 
-                className="w-full max-w-lg object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.55)]"
+                src={heroImages[0]} 
+                alt="Placeholder" 
+                className="w-full max-w-lg object-contain opacity-0 invisible"
               />
+              {heroImages.map((img, idx) => (
+                <img 
+                  key={img}
+                  src={img} 
+                  alt="Valam Car" 
+                  className={`absolute top-0 right-0 w-full max-w-lg h-full object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.55)] transition-all duration-1000 ease-in-out ${
+                    idx === currentImageIndex 
+                      ? 'opacity-100 translate-x-0 scale-100' 
+                      : 'opacity-0 translate-x-12 scale-95 pointer-events-none'
+                  }`}
+                />
+              ))}
             </div>
           </div>
 
@@ -90,9 +120,15 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute bottom-8 right-8 z-10 flex gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">
-        <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
-        <span className="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-        <span className="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+        {heroImages.map((_, idx) => (
+          <button 
+            key={idx}
+            onClick={() => setCurrentImageIndex(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              currentImageIndex === idx ? 'bg-white scale-110' : 'bg-white/30 hover:bg-white/50'
+            }`}
+          ></button>
+        ))}
       </div>
 
 
