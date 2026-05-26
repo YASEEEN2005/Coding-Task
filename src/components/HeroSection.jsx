@@ -4,8 +4,6 @@ const heroImages = [
   "/images/car.png",
   "/Car images/Sonet.png",
   "/Car images/mahindra.png",
-  "/Car images/scorpio.png",
-  "/Car images/swift.png"
 ];
 
 export default function HeroSection() {

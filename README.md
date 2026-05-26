@@ -112,5 +112,5 @@ Valam's design is heavily inspired by modern automotive luxury brands. We utiliz
 
 <div align="center">
   <p>Built with ❤️ for a seamless car rental experience.</p>
-  <p>© 2026 Valam. All Rights Reserved.</p>
+  <p>© 2026  Valam. All Rights Reserved.</p>
 </div>
